@@ -2,21 +2,37 @@ $header-bg: #F6F6F7;
 $required-star: #C90000;
 $light-grey-border: #CCCCCC;
 $dark-grey-border: #222222;
-$primary-font: #222222;
-$secondary-font: #888888;
+$primary-font-color: #222222;
+$secondary-font-color: #888888;
 
-.navbar {
-    margin: 30px 0 30px 0;
+body {
+    color: $primary-font-color;
+}
+
+.nav {
+    margin: 10px 0 30px 0;
     background-color: $header-bg;
 
+    width: 100%;
+
+
     span {
-        color: $secondary-font;
+        color: $secondary-font-color;
         font-size: 10px;
     }
 }
 
+.nav-tabs {
+    border-bottom: none;
+    z-index: 9999;
+}
+
 #product-name {
     padding: 0 0 20px 0;
+}
+
+#product-image {
+    margin-bottom: 20px;
 }
 
 .price-tag {
@@ -25,11 +41,17 @@ $secondary-font: #888888;
     padding: 10px 0;
 }
 
+
 #product-description,
 #sizes {
-    color: $secondary-font;
+    color: $secondary-font-color;
     padding: 20px 0;
     line-height: 1.5rem;
+    font-size: 13px;
+}
+
+#chosen-size {
+    color: $primary-font-color;
     font-size: 13px;
 }
 
@@ -37,22 +59,97 @@ $secondary-font: #888888;
     color: $required-star;
 }
 
-.size-buttons button {
-    padding: 10px 0;
-    border: 1px solid $light-grey-border;
-    margin: 5px 5px 5px 0;
-    width: 35px;
-    color: $secondary-font;
-    font-size: 11px;
 
-    button #s {
-        margin-left: 0;
+.size-buttons {
+    button[type=button] {
+        padding: 10px 0;
+        border: 1px solid $light-grey-border;
+        margin: 5px 5px 5px 0;
+        width: 35px;
+        color: $secondary-font-color;
+        font-size: 11px;
+        outline: none;
     }
+
+    button:hover {
+        border: 2px solid $dark-grey-border;
+        color: $primary-font-color;
+    }
+
+    button:focus {
+        border: 2px solid $dark-grey-border;
+        color: $primary-font-color;
+    }
+
+
+    button:active {
+        border: 2px solid $dark-grey-border;
+        color: $primary-font-color;
+    }
+
+
 }
 
 .add-to-cart-button {
-    padding: 15px;
+    width: 150px;
+    padding: 10px;
     font-size: 13px;
     border: 2px solid $dark-grey-border;
     margin: 10px 0;
+    transition: 0.2s;
+}
+
+.add-to-cart-button:hover {
+    color: white;
+    background-color: $primary-font-color;
+}
+
+#myCart {
+
+    //        display: none;
+    right: 15px;
+    position: absolute;
+    overflow: auto;
+    top: 43px;
+    padding: 10px;
+    background-color: white;
+    border-right: 1px solid $light-grey-border;
+    border-left: 1px solid $light-grey-border;
+    border-bottom: 1px solid $light-grey-border;
+    z-index: 1;
+    cursor: pointer;
+
+    li {
+        padding: 10px;
+
+    }
+
+    z-index: 1;
+
+    .tab-pane {
+        max-width: 300px;
+    }
+}
+
+
+#mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 1px;
+    background-color: $light-grey-border;
+}
+
+
+#cart-price,
+#cart-size,
+#qty,
+#cart-chosen-size {
+    font-size: 11px;
+    color: $primary-font-color;
+}
+
+.show {
+    display: block;
 }

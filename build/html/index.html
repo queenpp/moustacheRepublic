@@ -15,19 +15,63 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container justify-content-end" style="padding-right: 0"> <span>My Cart()</span>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 mx-auto">
+                <ul class="nav nav-tabs justify-content-end" role="tablist">
+                    <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#tab1" role="tab">My Cart ( 4 )</a></li>
+
+                </ul>
+                <div class="tab-content " id="myCart">
+                    <div id="mask"></div>
+                    <div class="tab-pane justify-content-end" id="tab1" role="tabpanel">
+                        <div class="container py-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="cart-product"><img src="/MRpractical/build/images/classic-tee.jpg" alt="Classic Tee" width="100%"></div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="cart-details">
+                                        <p class="cart-heading">Classic Tee</p><span id="qty">1</span> x <span id="cart-price">$75.99</span><br>
+                                        <span id="cart-size">Size:</span> <span id="cart-chosen-size">S</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container py-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="cart-product"><img src="/MRpractical/build/images/classic-tee.jpg" alt="Classic Tee" width="100%"></div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="cart-details">
+                                        <p class="cart-heading">Classic Tee</p><span id="qty">3</span> x <span id="cart-price">$75.99</span><br>
+                                        <span id="cart-size">Size:</span> <span id="cart-chosen-size">M</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </nav>
+    </div>
+
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 col-xs-12 col-s-12"><img src="/MRpractical/build/images/classic-tee.jpg" alt="Classic Tee" width="100%"></div>
-            <div class="col-lg-5 col-xs-12 col-s-12">
+            <div class="col-lg-5 col-md-5 col-xs-12 col-s-12"><img id="product-image" src="/MRpractical/build/images/classic-tee.jpg" alt="Classic Tee" width="100%"></div>
+            <div class="col-lg-5 col-md-5 col-xs-12 col-s-12">
                 <h4 id="product-name">Classic Tee</h4>
                 <div class="price-tag"><span>$75.00</span></div>
                 <p id="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In egestas erat imperdiet sed euismod nisi. Commodo quis imperdiet massa tincidunt nunc pulvinar. Dolor sit amet consectetur adipiscing elit pellentesque. </p>
                 <span id="sizes"><strong>SIZE</strong></span><span id="required">*</span> <span id="chosen-size"></span>
-                <div class="size-buttons"><button id="s">S</button><button>M</button><button>L</button></div>
+                <div class="size-buttons"><button type="button" data-tip="S" onclick="getSizes(this)">S</button><button type="button" data-tip="M" onclick="getSizes(this)">M</button><button type="button" data-tip="L" onclick="getSizes(this)">L</button></div>
                 <button class="add-to-cart-button">ADD TO CART</button>
             </div>
         </div>

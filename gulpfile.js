@@ -35,8 +35,7 @@ gulp.task('browser-sync', function () {
     //initialize browsersync with PHP server
 
     browserSync.init(files, {
-        proxy: "http://localhost:3000/MRpratical/src/html",
-        browser: ['google chrome']
+        proxy: "http://localhost:3000/MRpractical/src/html",        browser: ['google chrome']
     });
 });
 
