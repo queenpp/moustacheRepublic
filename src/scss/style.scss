@@ -69,6 +69,7 @@ body {
         color: $secondary-font-color;
         font-size: 11px;
         outline: none;
+        transition: 0.2s;
     }
 
     button:hover {
@@ -97,6 +98,7 @@ body {
     border: 2px solid $dark-grey-border;
     margin: 10px 0;
     transition: 0.2s;
+    outline: none;
 }
 
 .add-to-cart-button:hover {
@@ -104,13 +106,13 @@ body {
     background-color: $primary-font-color;
 }
 
-#myCart {
+.tab-content {
 
-    //        display: none;
+    display: none;
     right: 15px;
     position: absolute;
     overflow: auto;
-    top: 43px;
+    top: 37px;
     padding: 10px;
     background-color: white;
     border-right: 1px solid $light-grey-border;
@@ -136,15 +138,15 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 195px;
+    width: 221px;
     height: 1px;
     background-color: $light-grey-border;
 }
 
-
+#clickCart,
 #cart-price,
 #cart-size,
-#qty,
+#cart-qty,
 #cart-chosen-size {
     font-size: 11px;
     color: $primary-font-color;
@@ -153,3 +155,19 @@ body {
 .show {
     display: block;
 }
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    border-color: $light-grey-border $light-grey-border $light-grey-border;
+}
+
+//
+//.nav-link.active {
+//    background-color: $header-bg !important;
+//    border: none;
+//}
+//
+//.inactive {
+//    background-color: white !important;
+//    border-color: $light-grey-border $light-grey-border $light-grey-border !important;
+//}

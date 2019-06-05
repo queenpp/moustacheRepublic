@@ -16,16 +16,16 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-10 mx-auto">
-                <ul class="nav nav-tabs justify-content-end" role="tablist">
-                    <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#tab1" role="tab">My Cart ( 4 )</a></li>
+            <div class="col-12">
+                <ul class="nav nav-tabs justify-content-end">
+                    <li class="nav-item"><a class="nav-link" href="#tab1" id="clickCart">My Cart ( <span id="cart-qty"></span> )</a></li>
 
                 </ul>
                 <div class="tab-content " id="myCart">
                     <div id="mask"></div>
-                    <div class="tab-pane justify-content-end" id="tab1" role="tabpanel">
+                    <div class="tab-pane justify-content-end" id="cart-menu" role="tabpanel">
                         <div class="container py-3">
                             <div class="row">
                                 <div class="col-4">
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="col-7">
                                     <div class="cart-details">
-                                        <p class="cart-heading">Classic Tee</p><span id="qty">1</span> x <span id="cart-price">$75.99</span><br>
+                                        <p class="cart-heading">Classic Tee</p><span class="qty">1</span> x <span id="cart-price">$75.99</span><br>
                                         <span id="cart-size">Size:</span> <span id="cart-chosen-size">S</span>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="col-7">
                                     <div class="cart-details">
-                                        <p class="cart-heading">Classic Tee</p><span id="qty">3</span> x <span id="cart-price">$75.99</span><br>
+                                        <p class="cart-heading">Classic Tee</p><span class="qty">3</span> x <span id="cart-price">$75.99</span><br>
                                         <span id="cart-size">Size:</span> <span id="cart-chosen-size">M</span>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
 
 
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-lg-5 col-md-5 col-xs-12 col-s-12"><img id="product-image" src="/MRpractical/build/images/classic-tee.jpg" alt="Classic Tee" width="100%"></div>
             <div class="col-lg-5 col-md-5 col-xs-12 col-s-12">
                 <h4 id="product-name">Classic Tee</h4>

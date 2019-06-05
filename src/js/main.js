@@ -10,10 +10,20 @@ document.getElementById("clickCart").onclick = function () {
 };
 
 function addToCartFunction() {
-    var qty = document.getElementById("qty");
-    var totalinCart = document.getElementById("totalinCart");
-    document.getElementById("clickCart").classList.toggle("active");
-    //    document.getElementById("cartDropDown").classList.toggle("show");
 
-    console.log("clicking");
+    document.getElementById("myCart").classList.toggle("show");
+    document.getElementById("cart-menu").classList.toggle("active");
+
+    document.getElementById("clickCart").classList.toggle("active");
 }
+
+var cartTotalqty = document.getElementById("cart-qty");
+var qty = document.getElementsByClassName("qty");
+var j = 0;
+//    document.getElementById("cartDropDown").classList.toggle("show");
+for (i = 0; i < qty.length; i++) {
+    j = qty[i].innerHTML;
+    j++;
+
+}
+cartTotalqty.innerHTML = j;
